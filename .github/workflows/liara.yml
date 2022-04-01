@@ -1,4 +1,4 @@
-name: CD-Example
+name: Themazlife
 on:
   push:
     branches: [master]

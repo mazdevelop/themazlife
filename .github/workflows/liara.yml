@@ -1,4 +1,4 @@
-name: themazlife
+name: CD-Example
 on:
   push:
     branches: [master]

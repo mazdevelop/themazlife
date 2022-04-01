@@ -7,7 +7,6 @@
       <p>پروژه ها</p>
       <p>درباره ی من</p>
       <p>ارتباط با من</p>
-      <p>change</p>
     </div>
   </div>
 </template>
@@ -21,9 +20,11 @@ export default {};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: $padding;
+  box-sizing: border-box;
   height: 80px;
-  width: 90%;
+  width: 100%;
+  position: absolute;
   .wrapper--link {
     display: flex;
     p {

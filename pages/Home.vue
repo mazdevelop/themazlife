@@ -1,10 +1,6 @@
 <template>
   <div class="home">
-    <div class="wrapper--imgs" @click="changeImg">
-      <div class="wrapper--info">
-        <h1>{{ project_info[project_number].title }}</h1>
-        <p>{{ project_info[project_number].technology }}</p>
-      </div>
+    <div class="container--imgs">
       <div
         :class="`wrapper--img img-${index}`"
         v-for="(item, index) in 3"
@@ -16,6 +12,20 @@
           srcset=""
         />
       </div>
+      <div class="wrapper--slider--desktop">
+        <p @click="changeImg('previous')">
+          <i class="bx bx-left-arrow-alt"></i>
+        </p>
+        <p @click="changeImg('next')"><i class="bx bx-right-arrow-alt"></i></p>
+      </div>
+    </div>
+    <div class="wrapper--info">
+      <p>{{ project_info[project_number].technology }}</p>
+      <h1>{{ project_info[project_number].title }}</h1>
+    </div>
+    <div class="wrapper--slider">
+      <p @click="changeImg('previous')"><i class="bx bx-left-arrow-alt"></i></p>
+      <p @click="changeImg('next')"><i class="bx bx-right-arrow-alt"></i></p>
     </div>
   </div>
 </template>
@@ -46,10 +56,16 @@ export default {
     };
   },
   methods: {
-    changeImg() {
-      this.project_number == this.project_info.length - 1
-        ? (this.project_number = 0)
-        : this.project_number++;
+    changeImg(value) {
+      if (value === "next") {
+        this.project_number == this.project_info.length - 1
+          ? (this.project_number = 0)
+          : this.project_number++;
+      } else {
+        this.project_number == 0
+          ? (this.project_number = this.project_info.length - 1)
+          : this.project_number--;
+      }
     },
   },
 };
@@ -57,49 +73,109 @@ export default {
 
 <style lang="scss">
 .home {
-  height: calc(100vh - 80px);
   display: flex;
+  padding-top: 80px;
+  height: calc(100vh - 80px);
   align-items: center;
   justify-content: center;
   flex-direction: column;
   position: relative;
-  .wrapper--imgs {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    .wrapper--info {
-      display: grid;
-      justify-content: center;
 
-      h1 {
-        font-family: "Title";
-        margin: 0;
-        font-size: 5rem;
+  @media screen and (min-width: $tablet) {
+    padding: $padding;
+    padding-top: 80px;
+    flex-direction: column-reverse;
+  }
+  @media screen and (min-width: $laptop) {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .container--imgs {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .wrapper--slider--desktop {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 830px;
+      display: none;
+      @media screen and (min-width: $laptop) {
+        display: flex;
       }
       p {
-        font-family: "Text";
-        font-size: 0.75rem;
-        margin: 0;
-        text-align: center;
+        font-size: 5rem;
+        cursor: pointer;
       }
     }
+    @media screen and (min-width: $tablet) {
+      height: 500px;
+    }
     .wrapper--img {
-      width: 30%;
+      width: 220px;
+      height: 240px;
       position: absolute;
       left: 50%;
-      top: 55%;
+      top: 50%;
       transform: translate(-50%, -50%);
+
+      @media screen and (min-width: $tablet) {
+        width: 440px;
+        height: 480px;
+      }
+      @media screen and (min-width: $laptop) {
+        width: 330px;
+        height: 360px;
+      }
       &.img-0 {
         opacity: 0.6;
         transform: translate(-90%, -50%) rotate(-12deg) scale(0.8);
+        @media screen and (min-width: $laptop) {
+          transform: translate(-95%, -50%) rotate(-12deg) scale(0.8);
+        }
       }
       &.img-1 {
         opacity: 0.6;
         transform: translate(-10%, -50%) rotate(12deg) scale(0.8);
+        @media screen and (min-width: $laptop) {
+          transform: translate(-5%, -50%) rotate(12deg) scale(0.8);
+        }
       }
       img {
         width: 100%;
       }
+    }
+  }
+  .wrapper--info {
+    p {
+      text-align: center;
+      @media screen and (min-width: $laptop) {
+        font-size: 15px;
+      }
+    }
+    h1 {
+      @media screen and (min-width: $laptop) {
+        font-size: 65px;
+        margin: 0 0 10px 0;
+        letter-spacing: 8px;
+      }
+    }
+  }
+  .wrapper--slider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -50px;
+    @media screen and (min-width: $laptop) {
+      display: none;
+    }
+    p {
+      font-size: 3rem;
     }
   }
 }

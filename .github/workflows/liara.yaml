@@ -18,4 +18,4 @@ jobs:
           
         run: |
           npm i -g @liara/cli@2
-          liara deploy --app themazlife --api-token="$LIARA_TOKEN" --region iran  --detach
+          liara deploy  --port 3000 --platform node --app themazlife --api-token="$LIARA_TOKEN" --region iran  --detach

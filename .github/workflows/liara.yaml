@@ -14,6 +14,8 @@ jobs:
       - name: update-liara
         env:
           LIARA_TOKEN: ${{ secrets.LIARA_API_TOKEN }}
+          GIT_TRACE: 1
+          GIT_CURL_VERBOSE: 1
         run: |
           npm i -g @liara/cli@2
           liara deploy --app themazlife --api-token="$LIARA_TOKEN" --region iran  --detach

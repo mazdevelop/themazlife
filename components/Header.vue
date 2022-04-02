@@ -20,13 +20,17 @@ export default {};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: $padding;
+  padding: 0 15px;
   box-sizing: border-box;
   height: 80px;
   width: 100%;
   position: absolute;
+  @media screen and (min-width: $laptop) {
+    padding: $padding;
+  }
   .wrapper--link {
     display: flex;
+
     p {
       margin-left: 10px;
     }

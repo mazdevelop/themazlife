@@ -67,6 +67,44 @@
         />
       </div>
     </div>
+    <div class="container--other-projects">
+      <div class="wrapper--previus--project wrapper--other-projects">
+        <nuxt-link
+          :to="{
+            path: `${project_info[getOtherProject(number_project - 1)].title}`,
+          }"
+        >
+          <div class="wrapper--img">
+            <SquareImg
+              :img_path="
+                project_info[getOtherProject(number_project - 1)].poster
+              "
+            />
+          </div>
+          <p>قبلی</p>
+        </nuxt-link>
+
+        <h3>{{ project_info[getOtherProject(number_project - 1)].title }}</h3>
+      </div>
+      <div class="wrapper--next--project wrapper--other-projects">
+        <nuxt-link
+          :to="{
+            path: `${project_info[getOtherProject(number_project + 1)].title}`,
+          }"
+        >
+          <div class="wrapper--img">
+            <SquareImg
+              :img_path="
+                project_info[getOtherProject(number_project + 1)].poster
+              "
+            />
+          </div>
+          <p>بعدی</p>
+        </nuxt-link>
+
+        <h3>{{ project_info[getOtherProject(number_project + 1)].title }}</h3>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -78,6 +116,7 @@ export default {
     return {
       project_info: Project,
       project: {},
+      number_project: 0,
     };
   },
   created() {
@@ -85,10 +124,20 @@ export default {
   },
   methods: {
     getProject() {
-      for (const project of this.project_info) {
-        project.title === this.$route.params.Project
-          ? (this.project = project)
-          : "";
+      for (const [index, project] of this.project_info.entries()) {
+        if (project.title === this.$route.params.Project) {
+          this.project = project;
+          this.number_project = index;
+        }
+      }
+    },
+    getOtherProject(number_project) {
+      if (number_project < 0) {
+        return this.project_info.length - 1;
+      } else if (number_project > this.project_info.length - 1) {
+        return 0;
+      } else {
+        return number_project;
       }
     },
   },
@@ -218,6 +267,50 @@ export default {
 
         object-fit: cover;
         border-radius: 40px;
+      }
+    }
+  }
+  .container--other-projects {
+    display: flex;
+    margin: 60px 0;
+    .wrapper--other-projects {
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h3 {
+        margin: 0;
+        font-size: 22px;
+        @media screen and (min-width: $tablet) {
+          font-size: 42px;
+        }
+      }
+      p {
+        font-size: 12px;
+        text-align: center;
+      }
+      .wrapper--img {
+        display: none;
+        @media screen and (min-width: $tablet) {
+          display: inherit;
+        }
+      }
+    }
+    .wrapper--previus--project {
+      .wrapper--img {
+        transform: rotate(-15deg) scale(0.6);
+        @media screen and (min-width: $tablet) {
+          transform: rotate(-15deg) scale(0.5);
+        }
+      }
+    }
+    .wrapper--next--project {
+      .wrapper--img {
+        transform: rotate(15deg) scale(0.6);
+        @media screen and (min-width: $tablet) {
+          transform: rotate(15deg) scale(0.5);
+        }
       }
     }
   }

@@ -9,7 +9,6 @@
         <nuxt-link
           :to="{
             path: `${project_info[project_number].title}`,
-            params: { userID: 123 },
           }"
         >
           <img

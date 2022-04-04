@@ -1,16 +1,25 @@
 <template>
-  <div class="home">
+  <div class="home padding">
     <div class="container--imgs">
       <div
         :class="`wrapper--img img-${index}`"
         v-for="(item, index) in 3"
         :key="index"
       >
-        <img
-          :src="require(`~/assets/images/${project_info[project_number].path}`)"
-          alt=""
-          srcset=""
-        />
+        <nuxt-link
+          :to="{
+            path: `${project_info[project_number].title}`,
+            params: { userID: 123 },
+          }"
+        >
+          <img
+            :src="
+              require(`~/assets/images/${project_info[project_number].poster}`)
+            "
+            alt=""
+            srcset=""
+          />
+        </nuxt-link>
       </div>
       <div class="wrapper--slider--desktop">
         <p @click="changeImg('previous')">
@@ -31,32 +40,12 @@
 </template>
 
 <script>
+import Project from "../projects.json";
 export default {
   name: "Home",
   data() {
     return {
-      project_info: [
-        {
-          path: "smaple-1.jpg",
-          title: "Portfolio",
-          technology: "Vue 3 && GSAP",
-        },
-        {
-          path: "smaple-2.jpg",
-          title: "Dashboard",
-          technology: "Sass",
-        },
-        {
-          path: "smaple-3.jpg",
-          title: "Clone Twitter",
-          technology: "Vue 2 && Tailwind 3",
-        },
-        {
-          path: "smaple-4.jpg",
-          title: "Api Test",
-          technology: "Vue 2 && Bootstrap 5",
-        },
-      ],
+      project_info: Project,
       project_number: 0,
     };
   },
@@ -79,18 +68,12 @@ export default {
 <style lang="scss">
 .home {
   display: flex;
-  padding-top: 80px;
   height: calc(100vh - 80px);
   align-items: center;
   justify-content: center;
   flex-direction: column;
   position: relative;
 
-  @media screen and (min-width: $tablet) {
-    padding: $padding;
-    padding-top: 80px;
-    flex-direction: column-reverse;
-  }
   @media screen and (min-width: $laptop) {
     flex-direction: column-reverse;
     justify-content: space-between;
@@ -127,6 +110,7 @@ export default {
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+      overflow: hidden;
 
       @media screen and (min-width: $tablet) {
         width: 440px;
@@ -151,7 +135,17 @@ export default {
         }
       }
       img {
-        width: 100%;
+        width: 600px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.7);
+        position: absolute;
+        object-fit: cover;
+        @media screen and (min-width: $tablet) {
+          width: 720px;
+          height: 440px;
+        }
       }
     }
   }

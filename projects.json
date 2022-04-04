@@ -1,0 +1,83 @@
+[
+    {
+        "poster": "sample-1/sample-poster.jpg",
+        "cover": "sample-1/sample-cover.jpg",
+        "thumbnail": "sample-1/sample-thumbnail.jpg",
+        "title": "Portfolio",
+        "technology": "Vue 3 && GSAP",
+        "colors": {
+            "first": "#ffffff",
+            "second": "#000000",
+            "third": "#1d4ed8"
+        },
+        "font": "Mono",
+        "desc": {
+            "first": "بود در این پروژه پیاده سازی کنم vue 3 , tailwind, gsap  در این پرژه سعی شده بود تا آنچه در مورد -",
+            "second": " استفاده شده است  tailwindcss , gsap , ionicons , Vue 3  در ساخت  این پروژه از -",
+            "third": "  در این پروژه پیاده سازی شده Todo , Quote -",
+            "four": "نوار ابزار پشرفت کار و محدودیت تعدداد نوشتن در آن پیاده سازی شده است و اعتبارسنجی در فرم آن رخ داده است : Quote -"
+        },
+        "link": "https://tqse3.csb.app/"
+    },
+    {
+        "poster": "sample-2/sample-poster.jpg",
+        "cover": "sample-2/sample-cover.jpg",
+        "thumbnail": "sample-2/sample-thumbnail.jpg",
+        "title": "Dashboard",
+        "technology": "Sass",
+        "colors": {
+            "first": "#6659CD",
+            "second": "#FC8D00",
+            "third": "#BCE0EE",
+            "four": "#f9f9f9",
+            "five": "#252644"
+        },
+        "font": "Muli",
+        "desc": {
+            "first": " باشد dribbble  در این پروژه سعی شده تا حد ممکن شبیه به دیزاین موجود در سایت-",
+            "second": " استفاده شده است  JAVASCRIPT  , HTML , SCSS  در ساخت  این پروژه از -"
+        },
+        "link": "https://codepen.io/mazdevelop100/full/PoZrRBx",
+        "dribbble": "https://dribbble.com/shots/8022670-Web-App-EDU"
+    },
+    {
+        "poster": "sample-3/sample-poster.jpg",
+        "cover": "sample-3/sample-cover.jpg",
+        "thumbnail": "sample-3/sample-thumbnail.jpg",
+        "title": "Clone Twitter",
+        "technology": "Vue 2 && Tailwind 3",
+        "colors": {
+            "first": "#18a9ea",
+            "second": "#f1f5f9",
+            "third": "#ffffff",
+            "four": "#eeeff7"
+        },
+        "font": "Spartan, Raleway",
+        "desc": {
+            "first": "باشد Twitter در این پروژه سعی شده تا حد ممکن شبیه به دیزاین موجود در -",
+            "second": " استفاده شده است Vue 2  , Tailwind 3  در ساخت  این پروژه از -",
+            "third": " امکان توییت زدن  ، رسپانسیو -"
+        },
+        "link": "https://maz-twitter--3000.local.webcontainer.io"
+    },
+    {
+        "poster": "sample-4/sample-poster.jpg",
+        "cover": "sample-4/sample-cover.jpg",
+        "thumbnail": "sample-4/sample-thumbnail.jpg",
+        "title": "Api Test",
+        "technology": "Vue 2 && Bootstrap 5",
+        "colors": {
+            "first": "#e4e5e5",
+            "second": "#e46437",
+            "third": "#fff",
+            "four": "#c83d6f"
+        },
+        "font": "Russo One",
+        "desc": {
+            "first": "randomuser.me/api استفاده شده سایت  api  در این پروژه از -",
+            "second": " استفاده شده است Vue 2  , Bootstrap 5  در ساخت  این پروژه از -",
+            "third": "امکان سرچ کردن بر اساس  نقش کاربری -"
+        },
+        "link": "https://codepen.io/mazdevelop100/full/PoGMRPR"
+    }
+]

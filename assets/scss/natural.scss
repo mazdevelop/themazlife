@@ -9,5 +9,12 @@ body{
 }
 h1{
     font-family: 'Title';
-    
+}
+.padding{
+    padding: 0 20px;
+    padding-top: 80px;
+    @media screen and (min-width: $tablet) {
+        padding: $padding;
+        padding-top: 80px
+    }
 }

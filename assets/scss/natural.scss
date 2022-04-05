@@ -15,10 +15,11 @@ a{
     color:#000;
 }
 .padding{
-    padding: 0 20px;
-    padding-top: 80px;
+    padding: 80 20px;
+    
     @media screen and (min-width: $tablet) {
         padding: $padding;
-        padding-top: 80px
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 }

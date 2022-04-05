@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'سایت شخصی محسن علی زاده',
+    title: 'محسن علی زاده - توسعه دهنده - گالری من',
     htmlAttrs: {
       lang: 'en'
     },

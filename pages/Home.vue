@@ -21,10 +21,10 @@
         </nuxt-link>
       </div>
       <div class="wrapper--slider--desktop">
-        <p @click="changeImg('previous')">
+        <p @click="animeImg('previous')">
           <i class="bx bx-left-arrow-alt"></i>
         </p>
-        <p @click="changeImg('next')"><i class="bx bx-right-arrow-alt"></i></p>
+        <p @click="animeImg('next')"><i class="bx bx-right-arrow-alt"></i></p>
       </div>
     </div>
     <div class="wrapper--info">
@@ -32,14 +32,15 @@
       <h1>{{ project_info[project_number].title }}</h1>
     </div>
     <div class="wrapper--slider">
-      <p @click="changeImg('previous')"><i class="bx bx-left-arrow-alt"></i></p>
-      <p @click="changeImg('next')"><i class="bx bx-right-arrow-alt"></i></p>
+      <p @click="animeImg('previous')"><i class="bx bx-left-arrow-alt"></i></p>
+      <p @click="animeImg('next')"><i class="bx bx-right-arrow-alt"></i></p>
     </div>
   </div>
 </template>
 
 <script>
 import Project from "../projects.json";
+import gsap from "gsap";
 export default {
   name: "Home",
   data() {
@@ -59,6 +60,81 @@ export default {
           ? (this.project_number = this.project_info.length - 1)
           : this.project_number--;
       }
+    },
+    animeImg(value) {
+      const img_left = document.querySelector(".wrapper--img.img-0");
+      const img_right = document.querySelector(".wrapper--img.img-1");
+      const img_center = document.querySelector(".wrapper--img.img-2");
+      const duration = 1.4;
+      gsap
+        .timeline()
+        .to([img_left, img_right], {
+          duration: duration,
+          x: "-50%",
+          rotate: "0deg",
+          scale: 1,
+          ease: "expo.inOut",
+        })
+        .to(
+          [
+            img_center.querySelector("a img"),
+            img_right.querySelector("a img"),
+            img_left.querySelector("a img"),
+          ],
+          {
+            duration: duration,
+            stagger: 0.05,
+            top: "200%",
+            ease: "expo.inOut",
+          }
+        )
+        .add(() => this.changeImg(value))
+        .set(
+          [
+            img_center.querySelector("a img"),
+            img_right.querySelector("a img"),
+            img_left.querySelector("a img"),
+          ],
+          {
+            top: "-100%",
+          }
+        )
+        .to(
+          [
+            img_left.querySelector("a img"),
+            img_right.querySelector("a img"),
+            img_center.querySelector("a img"),
+          ],
+          {
+            duration: duration,
+            stagger: 0.05,
+            top: "50%",
+            ease: "expo.inOut",
+          }
+        )
+        .to(
+          [img_left, img_right],
+          {
+            scale: 0.8,
+          },
+          "finish"
+        )
+        .to(
+          img_right,
+          {
+            rotate: "12deg",
+            x: "-20%",
+          },
+          "finish"
+        )
+        .to(
+          img_left,
+          {
+            rotate: "-12deg",
+            x: "-80%",
+          },
+          "finish"
+        );
     },
   },
 };

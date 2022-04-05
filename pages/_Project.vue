@@ -8,6 +8,7 @@
         alt=""
       />
     </div>
+    <div class="separator"></div>
     <div class="wrapper--content">
       <div class="main">
         <div class="sub">
@@ -37,6 +38,7 @@
       </div>
       <div class="project-detail"></div>
     </div>
+    <div class="separator"></div>
     <div class="wrapper-detail">
       <div class="project-desc">
         <h3>توضیحات</h3>
@@ -67,6 +69,7 @@
         />
       </div>
     </div>
+    <div class="separator"></div>
     <div class="container--other-projects">
       <div class="wrapper--previus--project wrapper--other-projects">
         <nuxt-link

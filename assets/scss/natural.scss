@@ -23,3 +23,13 @@ a{
         padding-bottom: 80px;
     }
 }
+.separator{
+    margin: 40px auto;
+    height: 1px;
+    background-color: #000;
+    width: 80%;
+    opacity: 0.2;
+    @media screen and (min-width: $laptop){
+        margin: 100px auto;
+    }
+}

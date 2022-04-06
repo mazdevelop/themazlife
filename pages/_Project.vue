@@ -239,6 +239,7 @@ export default {
         font-size: 12px;
         text-align: right;
         font-weight: bold;
+        direction: rtl;
       }
       a {
         text-decoration: none;

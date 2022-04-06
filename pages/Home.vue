@@ -29,7 +29,8 @@
     </div>
     <div class="wrapper--info">
       <p>{{ project_info[project_number].technology }}</p>
-      <h1>{{ project_info[project_number].title }}</h1>
+      <!-- <h1>{{ project_info[project_number].title }}</h1> -->
+      <Title :title="project_info[project_number].title" />
     </div>
     <div class="wrapper--slider">
       <p @click="animeImg('previous')"><i class="bx bx-left-arrow-alt"></i></p>
@@ -86,8 +87,10 @@ export default {
             stagger: 0.05,
             top: "200%",
             ease: "expo.inOut",
-          }
+          },
+          "start"
         )
+        .add(() => this.animeTitleToTop(), "start")
         .add(() => this.changeImg(value))
         .set(
           [
@@ -112,6 +115,7 @@ export default {
             ease: "expo.inOut",
           }
         )
+        .add(() => this.animeTitleToButton())
         .to(
           [img_left, img_right],
           {
@@ -135,6 +139,43 @@ export default {
           },
           "finish"
         );
+    },
+    animeTitleToTop() {
+      const duration = 1;
+      gsap.timeline().to(".title--components span", {
+        duration: duration,
+        stagger: 0.02,
+        skewX: "-40deg",
+        skewY: "-40deg",
+        y: "150%",
+        ease: "expo.inOut",
+      });
+    },
+    animeTitleToButton() {
+      const duration = 1;
+      gsap
+        .timeline()
+        .set(".title--components span", {
+          skewX: "60deg",
+          skewY: "60deg",
+        })
+        .to(".title--components span", {
+          duration: duration,
+          stagger: 0.02,
+          y: "0%",
+          skewX: "0deg",
+          skewY: "0deg",
+          ease: "expo.inOut",
+        });
+    },
+    test() {
+      const duration = 1;
+      gsap.timeline().to(".title--components .new_letter", {
+        duration: duration,
+        stagger: 0.02,
+        y: "0%",
+        ease: "expo.inOut",
+      });
     },
   },
 };

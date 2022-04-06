@@ -28,8 +28,7 @@
       </div>
     </div>
     <div class="wrapper--info">
-      <p>{{ project_info[project_number].technology }}</p>
-      <!-- <h1>{{ project_info[project_number].title }}</h1> -->
+      <p class="technology">{{ project_info[project_number].technology }}</p>
       <Title :title="project_info[project_number].title" />
     </div>
     <div class="wrapper--slider">
@@ -90,6 +89,14 @@ export default {
           },
           "start"
         )
+        .to(
+          ".technology",
+          {
+            opacity: 0,
+            duration: 0.5,
+          },
+          "start"
+        )
         .add(() => this.animeTitleToTop(), "start")
         .add(() => this.changeImg(value))
         .set(
@@ -115,7 +122,13 @@ export default {
             ease: "expo.inOut",
           }
         )
+
         .add(() => this.animeTitleToButton())
+        .to(".technology", {
+          opacity: 1,
+          duration: duration,
+          delay: 0.5,
+        })
         .to(
           [img_left, img_right],
           {
@@ -184,7 +197,8 @@ export default {
 <style lang="scss">
 .home {
   display: flex;
-  height: calc(100vh - 80px);
+  height: 100vh;
+  padding-bottom: 0 !important;
   align-items: center;
   justify-content: center;
   flex-direction: column;

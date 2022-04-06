@@ -12,10 +12,10 @@
         },
         "font": "Mono",
         "desc": {
-            "first": "بود در این پروژه پیاده سازی کنم vue 3 , tailwind, gsap  در این پروژه سعی شده بود تا آنچه در مورد -",
-            "second": " استفاده شده است  tailwindcss , gsap , ionicons , Vue 3  در ساخت  این پروژه از -",
-            "third": "  در این پروژه پیاده سازی شده Todo , Quote -",
-            "four": "نوار ابزار پشرفت کار و محدودیت تعدداد نوشتن در آن پیاده سازی شده است و اعتبارسنجی در فرم آن رخ داده است : Quote -"
+            "first": " - در این پروژه سعی شده بود تا آنچه در مورد  vue 3 , tailwind, gsap یاد گرفتم اجرا کنم",
+            "second": " - در ساخت  این پروژه از  tailwindcss , gsap , ionicons , Vue 3   استفاده شده است",
+            "third": " - Todo , Quote  در این پروژه پیاده سازی شده ",
+            "four": "- Quote :  نوار ابزار پشرفت کار و محدودیت تعداد نوشتن در آن پیاده سازی شده است و اعتبارسنجی در فرم آن رخ داده است "
         },
         "link": "https://tqse3.csb.app/"
     },
@@ -34,8 +34,8 @@
         },
         "font": "Muli",
         "desc": {
-            "first": " باشد dribbble  در این پروژه سعی شده تا حد ممکن شبیه به دیزاین موجود در سایت-",
-            "second": " استفاده شده است  JAVASCRIPT  , HTML , SCSS  در ساخت  این پروژه از -"
+            "first": "- در این پروژه سعی شده تا حد ممکن شبیه به دیزاین موجود در سایت  dribbble باشد ",
+            "second": "  - در ساخت  این پروژه از  JAVASCRIPT  , HTML , SCSS استفاده شده است"
         },
         "link": "https://codepen.io/mazdevelop100/full/PoZrRBx",
         "dribbble": "https://dribbble.com/shots/8022670-Web-App-EDU"
@@ -54,9 +54,9 @@
         },
         "font": "Spartan, Raleway",
         "desc": {
-            "first": "باشد Twitter در این پروژه سعی شده تا حد ممکن شبیه به دیزاین موجود در -",
-            "second": " استفاده شده است Vue 2  , Tailwind 3  در ساخت  این پروژه از -",
-            "third": " امکان توییت زدن  ، رسپانسیو -"
+            "first": " - در این پروژه سعی شده تا حد ممکن شبیه به دیزاین موجود در  Twitter  شبیه باشد ",
+            "second": "- در ساخت  این پروژه از  Vue 2  , Tailwind 3 استفاده شده است",
+            "third": "- امکان توییت زدن  ، رسپانسیو "
         },
         "link": "https://maz-twitter--3000.local.webcontainer.io"
     },
@@ -74,9 +74,9 @@
         },
         "font": "Russo One",
         "desc": {
-            "first": "randomuser.me/api استفاده شده سایت  api  در این پروژه از -",
-            "second": " استفاده شده است Vue 2  , Bootstrap 5  در ساخت  این پروژه از -",
-            "third": "امکان سرچ کردن بر اساس  نقش کاربری -"
+            "first": "- در این پروژه از  سایت  randomuser.me/api استفاده شده",
+            "second": "- در ساخت  این پروژه از   Vue 2  , Bootstrap 5  استفاده شده است",
+            "third": "- امکان سرچ کردن بر اساس  نقش کاربری "
         },
         "link": "https://codepen.io/mazdevelop100/full/PoGMRPR"
     }

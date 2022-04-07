@@ -1,4 +1,4 @@
-name: themazlife
+name: LIARA
 on:
   push:
     branches: [master]
@@ -10,10 +10,12 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: "12"
+          node-version: "16"
+          port: 22
       - name: update-liara
         env:
           LIARA_TOKEN: ${{ secrets.LIARA_API_TOKEN }}
+          
         run: |
           npm i -g @liara/cli@2
-          liara deploy --api-token="$LIARA_TOKEN" --region iran --detach
+          liara deploy  --port 3000 --platform node --app themazlife --api-token="$LIARA_TOKEN" --region iran  --detach

@@ -1,0 +1,183 @@
+[
+    {
+        "poster": "sample-1/sample-poster.jpg",
+        "cover": "sample-1/sample-cover.jpg",
+        "thumbnail": "sample-1/sample-thumbnail.jpg",
+        "title": "Portfolio",
+        "technology": "Vue 3 && GSAP",
+        "colors": {
+            "first": "#ffffff",
+            "second": "#000000",
+            "third": "#1d4ed8"
+        },
+        "font": "Mono",
+        "desc": {
+            "first": " - در این پروژه سعی شده بود تا آنچه در مورد  vue 3 , tailwind, gsap یاد گرفتم اجرا کنم",
+            "second": " - در ساخت  این پروژه از  tailwindcss , gsap , ionicons , Vue 3   استفاده شده است",
+            "third": " - Todo , Quote  در این پروژه پیاده سازی شده ",
+            "four": "- Quote :  نوار ابزار پشرفت کار و محدودیت تعداد نوشتن در آن پیاده سازی شده است و اعتبارسنجی در فرم آن رخ داده است "
+        },
+        "link": "https://tqse3.csb.app/"
+    },
+    {
+        "poster": "sample-2/sample-poster.jpg",
+        "cover": "sample-2/sample-cover.jpg",
+        "thumbnail": "sample-2/sample-thumbnail.jpg",
+        "title": "Dashboard",
+        "technology": "Sass",
+        "colors": {
+            "first": "#6659CD",
+            "second": "#FC8D00",
+            "third": "#BCE0EE",
+            "four": "#f9f9f9",
+            "five": "#252644"
+        },
+        "font": "Muli",
+        "desc": {
+            "first": "- در این پروژه سعی شده تا حد ممکن شبیه به دیزاین موجود در سایت  dribbble باشد ",
+            "second": "  - در ساخت  این پروژه از  JAVASCRIPT  , HTML , SCSS استفاده شده است"
+        },
+        "link": "https://codepen.io/mazdevelop100/full/PoZrRBx",
+        "dribbble": "https://dribbble.com/shots/8022670-Web-App-EDU"
+    },
+    {
+        "poster": "sample-7/sample-poster.jpg",
+        "cover": "sample-7/sample-cover.jpg",
+        "thumbnail": "sample-7/sample-thumbnail.jpg",
+        "title": "Dashboard-CleanMac",
+        "technology": "Html ,Css",
+        "colors": {
+            "first": "#ffa000 ",
+            "second": "#332a7c",
+            "third": "#89e0f0",
+            "four": "#ffffff",
+            "five": "#252644"
+        },
+        "font": "Muli",
+        "desc": {
+            "first": "- در این پروژه سعی شده تا حد ممکن شبیه به دیزاین موجود در سایت  dribbble باشد ",
+            "second": "  - در ساخت  این پروژه از  JAVASCRIPT  , HTML , CSS استفاده شده است"
+        },
+        "link": "https://codepen.io/mazdevelop100/full/wvGaRym",
+        "dribbble": "https://dribbble.com/shots/9551899-Dashboard-CleanMac"
+    },
+    {
+        "poster": "sample-6/sample-poster.jpg",
+        "cover": "sample-6/sample-cover.jpg",
+        "thumbnail": "sample-6/sample-thumbnail.jpg",
+        "title": "Social Dashboard",
+        "technology": "Vue 2 && Tailwind 3",
+        "colors": {
+            "first": "#111f3b",
+            "second": "#000000",
+            "third": "#ffffff",
+            "four": "#5e9eea"
+        },
+        "font": "Default",
+        "desc": {
+            "first": "- در ساخت  این پروژه از  Vue 2 , Gsap , Tailwind 3 استفاده شده است",
+            "second": "- تغییر حالت شب و روز "
+        },
+        "link": "https://codepen.io/mazdevelop100/full/GRrdpGz"
+    },
+    {
+        "poster": "sample-3/sample-poster.jpg",
+        "cover": "sample-3/sample-cover.jpg",
+        "thumbnail": "sample-3/sample-thumbnail.jpg",
+        "title": "Clone Twitter",
+        "technology": "Vue 2 && Tailwind 3",
+        "colors": {
+            "first": "#18a9ea",
+            "second": "#f1f5f9",
+            "third": "#ffffff",
+            "four": "#eeeff7"
+        },
+        "font": "Spartan, Raleway",
+        "desc": {
+            "first": " - در این پروژه سعی شده تا حد ممکن شبیه به دیزاین موجود در  Twitter  شبیه باشد ",
+            "second": "- در ساخت  این پروژه از  Vue 2  , Tailwind 3 استفاده شده است",
+            "third": "- امکان توییت زدن  ، رسپانسیو ",
+            "four": "- باید قبل از دیدن دمو  در StackBlitz پروژه را فعال کنید  "
+        },
+        "link": "https://maz-twitter--3000.local.webcontainer.io"
+    },
+    {
+        "poster": "sample-9/sample-poster.jpg",
+        "cover": "sample-9/sample-cover.jpg",
+        "thumbnail": "sample-9/sample-thumbnail.jpg",
+        "title": "Spotify",
+        "technology": "Vue 3 && Tailwind 3",
+        "colors": {
+            "first": "#282828",
+            "second": "#181818",
+            "third": "#49433f",
+            "four": "#fafafa"
+        },
+        "font": "Mono",
+        "desc": {
+            "first": " - در این پروژه سعی شده تا حد ممکن شبیه به دیزاین موجود در  Spotify  شبیه باشد ",
+            "second": "- در ساخت  این پروژه از  Vue 3  , Tailwind 3 استفاده شده است",
+            "third": "- باید قبل از دیدن دمو  در StackBlitz پروژه را فعال کنید  "
+        },
+        "link": "https://vue-spotify--3000.local.webcontainer.io/"
+    },
+    {
+        "poster": "sample-8/sample-poster.jpg",
+        "cover": "sample-8/sample-cover.jpg",
+        "thumbnail": "sample-8/sample-thumbnail.jpg",
+        "title": "Api Test",
+        "technology": "Vue 2 && Tailwind 2",
+        "colors": {
+            "first": "#3b414b",
+            "second": "#6d727a",
+            "third": "#ffffff",
+            "four": "#000000"
+        },
+        "font": "Default",
+        "desc": {
+            "first": "- در این پروژه از  سایت  randomuser.me/api استفاده شده",
+            "second": "- در ساخت  این پروژه از   Vue 2  , Tailwind 2  استفاده شده است",
+            "third": "- امکان سرچ کردن بر اساس  نقش کاربری "
+        },
+        "link": "https://codepen.io/mazdevelop100/full/PoGMRPR"
+    },
+    {
+        "poster": "sample-5/sample-poster.jpg",
+        "cover": "sample-5/sample-cover.jpg",
+        "thumbnail": "sample-5/sample-thumbnail.jpg",
+        "title": "Vase",
+        "technology": "Chart.js",
+        "colors": {
+            "first": "#f5eedc",
+            "second": "#ffffff",
+            "third": "#f5eedc",
+            "four": "#ffebcc"
+        },
+        "font": "Poppins",
+        "desc": {
+            "first": "- پنل مدیریت",
+            "second": "- در ساخت  این پروژه از   Hmtl/Css  , Chart.js  استفاده شده است"
+        },
+        "link": "https://codepen.io/mazdevelop100/full/vYeGENy"
+    },
+    {
+        "poster": "sample-4/sample-poster.jpg",
+        "cover": "sample-4/sample-cover.jpg",
+        "thumbnail": "sample-4/sample-thumbnail.jpg",
+        "title": "Select Role",
+        "technology": "Vue 2 && Bootstrap 5",
+        "colors": {
+            "first": "#e4e5e5",
+            "second": "#e46437",
+            "third": "#fff",
+            "four": "#c83d6f"
+        },
+        "font": "Russo One",
+        "desc": {
+            "first": "- در این پروژه از  سایت  randomuser.me/api استفاده شده",
+            "second": "- در ساخت  این پروژه از   Vue 2  , Bootstrap 5  استفاده شده است",
+            "third": "- امکان سرچ کردن بر اساس  نقش کاربری "
+        },
+        "link": "https://codepen.io/mazdevelop100/full/PoGMRPR"
+    }
+]

@@ -1,19 +1,36 @@
 <template>
   <div class="header">
     <div class="wrapper--logo">
-      <h1>MAZ</h1>
+      <router-link to="/">
+        <h1>MAZ</h1>
+      </router-link>
     </div>
     <div class="wrapper--link">
-      <p>پروژه ها</p>
-      <p>درباره ی من</p>
-      <p>لینک</p>
-      <p>ارتباط با من</p>
+      <router-link v-for="(link, i) in links" :key="i" :to="link.path">{{
+        link.name
+      }}</router-link>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Header",
+  data() {
+    return {
+      links: [
+        {
+          name: "پروژه ها",
+          path: "/",
+        },
+        {
+          name: "درباره ی من",
+          path: "/About",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss">
@@ -21,12 +38,19 @@ export default {};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 0 15px;
+  box-sizing: border-box;
   height: 80px;
-  width: 90%;
+  width: 100%;
+  position: absolute;
+  z-index: 90;
+  @media screen and (min-width: $laptop) {
+    padding: $padding;
+  }
   .wrapper--link {
     display: flex;
-    p {
+
+    a {
       margin-left: 10px;
     }
   }
